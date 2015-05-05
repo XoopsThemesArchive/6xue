@@ -1,0 +1,41 @@
+<{if !$nofooter}>
+<div style="text-align:center;">
+<iframe src="<{$xoops_url}>/uploads/adshtml/footer.html" frameborder="0" width="728" height="90" scrolling="no"></iframe>
+</div>
+<{include file="6xue/friends.html"}>
+<div id="footerdiv">
+<table class="footertable" cellspacing="0">
+    <tr>
+       <td id="footerbar">
+<div class="footer setcenter">
+<a href="http://www.6xue.info/others/aboutus_cn.html" target="_blank">关于我们</a> |
+<a href="http://www.6xue.info/others/aboutus_en.html" target="_blank">About us</a> |
+<a href="http://www.6xue.info/others/terms_cn.html" target="_blank">法律声明</a> |
+<a href="http://www.6xue.info/others/privacy_cn.html" target="_blank">隐私条款</a> |
+<a href="http://www.6xue.info/others/copyright_cn.html" target="_blank">著作权</a></div>
+	</td>
+</tr>
+<tr>
+	<td align="center">
+	<table width="100%" align="center" cellpadding="0" cellspacing="0"><tr><td align="center"><span style="color:#666666;">邮箱：info@6xue.info &nbsp;&nbsp;&nbsp;&nbsp;电话:010-51557589/91/92 转807</span></td></tr></table>
+		<table width="100%" align="center"><tr><td style="vertical-align:middle;" align="right" width="40%"></td><td style="vertical-align:middle;" width="2%"><a href="http://www.hd315.gov.cn/beian/view.asp?bianhao=010202006062000010" target="_blank"><img border="0" src="<{$xoops_url}>/images/biaoshi_small.gif" alt="工商备案信息" style=""/></a></td><td style="vertical-align:middle;" align="left" width="48%">&nbsp;<a href="http://www.miibeian.gov.cn/login.jsp" target="_blank">京ICP证060318号</a></td></tr></table>
+	</td>
+</tr>
+<tr>
+	<td align="center"><span style="color:#666666;">为了正常浏览，我们建议您使用IE6浏览器。并将显示器分辨率设置为800X600以上。</span></td>
+</tr>
+</table>
+<{/if}>
+<{$xoops_footer}> 
+<{if $xoops_isadmin}>
+<hr />
+<div align="center">
+<a href="<{$xoops_url}>/admin.php" target="_blank"><{$smarty.const._US_ADMIN}></a> 
+					&nbsp;<a href="<{$xoops_url}>/modules/pageadmin/index.php?selectmoddir=<{$xoops_dirname}>&amp;selectmodfile=<{$nowpagename}>&amp;oldselectmoddir=<{$xoops_dirname}>">page admin</a>
+				
+	 | <acronym title="
+	<{php}>
+	echo round(($GLOBALS['xoopsLogger']->dumpTime()), 3)." Seconds | ".array_sum(array_map("count",$GLOBALS['xoopsLogger']->queries))." Queries";
+	<{/php}> -- <{$xoops_version}>
+	">Pageload</acronym> </div><{/if}>
+</div>

@@ -1,0 +1,73 @@
+<style type="text/css">
+<!--
+#logoheader{}
+#logoheader .logo {float:left;}
+#logoheader .slogan {float:left;padding-top:21px;padding-left:3px;}
+#logoheader .userinfo {clear:right;float:right;width:130px;}
+#logoheader .opinput {float:right;}
+#logoheader .optitle {float:left;padding-top:3px;}
+#logoheader .inputbox {width:85px;border:1px solid #7F9DB9;height:14px;}
+#logoheader .topbanner {margin-top:20px;}
+
+#logoheader .headermenu{color:#2E5AB2;padding:3px 3px 3px 10px;border-top:4px solid #2E5AB2;background-color:#EFEFEF;height:20px;display:block;clear:both;margin-top:8px;}
+#logoheader .headermenu ul{margin:0px;padding:0px;}
+#logoheader .headermenu ul li{ float:left;padding:5px;margin-left:0px;list-style-type:none;}
+-->
+</style>
+<div id="logoheader">
+	<table cellpadding="0" cellspacing="0" border="0"><tr><td width="17%">
+	<div class="logo"><a href="<{$xoops_url}>/?nav=logo"><img src='<{$xoops_imageurl}>images/logo_1012.png' /></a></div>
+	</td>
+	<td><div id="topbanner" class="topbanner">
+			<{include file="../uploads/home/topbanner.html"}>
+	</div></td>
+	<td width="20%" style="vertical-align: bottom;">
+	<div class="userinfo">
+		<{if !$xoops_isuser}>
+		<form action="<{$xoops_url}>/user.php" method="post" name="login">
+		<div style="clear:both;"><span class="optitle">用户名</span><span class="opinput"><input class="inputbox" type="text" size="9"  value="" name="uname" tabindex="1"/></span></div>
+		<div style="height:5px;clear:both;"><img src="<{$xoops_url}>/images/blank.gif" border="0" /></div>
+		<div style="clear:both;"><span class="optitle">密&nbsp;&nbsp;&nbsp;码</span><span class="opinput"><input class="inputbox" type="password" size="9" value="" name="pass" tabindex="2"/></span></div>
+		<div style="height:5px;clear:both;"><img src="<{$xoops_url}>/images/blank.gif" border="0" /></div>
+		<div style="clear:both;"><span class="optitle"><a href="<{$xoops_url}>/register.php">注册</a>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="opinput"><input class="inputbuttun" type="submit" value="登录" name="submit"  tabindex="3"></span></div>
+		<input type="hidden" name="xoops_redirect" value="<{$xoops_requesturi}>"/>
+		<input type="hidden" name="op" value="login" />
+		</form>
+		<{else}>
+		<div style="clear:both;text-align:right;">你好 <span style="color:#1253C7"><{$xoops_uname}></span>!</div>
+		<div style="height:5px;clear:both;"><img src="<{$xoops_url}>/images/blank.gif" border="0" /></div>
+		<div style="clear:both;text-align:right;"><a href="<{$xoops_url}>/modules/profile/invite_friends.php" target="_blank">邀请朋友</a>&nbsp;&nbsp;<a href="<{$xoops_url}>/user.php" target="_blank">个人信息</a></div>
+		<div style="height:5px;clear:both;"><img src="<{$xoops_url}>/images/blank.gif" border="0" /></div>
+		<div style="clear:both;text-align:right;">
+	<!--	<a href="<{$xoops_url}>/blog/admin.php" target="_blank">管理博客</a>&nbsp;&nbsp; -->
+		<a href="<{$xoops_url}>/user.php?op=logout">注销登录</a></div>
+		<{/if}>
+	</div>
+	</td></tr></table>
+	<div class="headermenu">
+		<ul>
+		<li><a href="<{$xoops_url}>/?nav=nav">首页</a></li>
+		<li>|</li>
+		<li><a href="<{$xoops_url}>/modules/Central/new_school_search.php?nav=nav"><span style="color:#ff0000" target="_blank">院校搜索</span></a></li>
+		<li>|</li>
+		<li><a href="<{$xoops_url}>/modules/Central/new_comment_center.php?nav=nav"><span style="color:#ff0000" target="_blank">院校点评</span></a></li>
+<!--		<li>|</li>
+		<li><a href="<{$xoops_url}>/modules/Central/new_zhuanjia_zhisheng.php?nav=nav"><span style="color:#ff0000">专家之声</span></a></li> //-->
+		<li>|</li>
+		<li><a href="<{$xoops_url}>/modules/schoolshow/?nav=nav" target="_blank">每日一校</a></li>
+		<li>|</li>
+		<li><a href="<{$xoops_url}>/modules/bbvmedia/?nav=nav" target="_blank">影音中心</a></li>
+		<li>|</li>
+		<li><a href="<{$xoops_url}>/modules/Central/new_6xue_diy.php?nav=nav" target="_blank">留学DIY</a></li>
+		<li>|</li>
+		<li><a href="<{$xoops_url}>/modules/Central/new_liuxueshenghuo.php?nav=nav" target="_blank">留学生活</a></li>
+		<li>|</li>
+		<li><a href="<{$xoops_url}>/bbs/?nav=nav" target="_blank">论坛</a></li>
+		<li>|</li>
+		<li><a href="<{$xoops_url}>/blog/summary.php?nav=nav" target="_blank">博客</a></li>
+		<li>|</li>
+		<li><a href="<{$xoops_url}>/modules/mystuff/?nav=nav" target="_blank">我的空间</a></li>
+		</ul>
+	</div>
+</div>
+<div style="height:10px;width:758px;clear:both;"><img src="<{$xoops_url}>/images/blank.gif" border="0" /></div>

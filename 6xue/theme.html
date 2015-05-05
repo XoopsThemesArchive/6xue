@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="description" content="<{$xoops_meta_description}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta name="author" content="<{$xoops_meta_author}>" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="XOOPS" />
+<title><{if $xoops_pagetitle}><{$xoops_pagetitle}> - <{/if}><{$xoops_sitename}></title>
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_url}>/xoops.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_themecss}>" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_url}>/modules/<{$xoops_dirname}>/templates/<{$xoops_dirname}>.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_url}>/modules/<{$xoops_dirname}>/templates/<{$xoops_dirname}>_<{$pagecss}>.css" />
+<!-- RMV: added module header -->
+<{$xoops_module_header}>
+<script type="text/javascript">
+<!--
+<{$xoops_js}>
+//-->
+</script>
+<script type="text/javascript" src="<{$xoops_imageurl}>js/ClickTracksCookies.js"></script>
+<script type="text/javascript">
+</script>
+<script type="text/javascript" src="<{$xoops_imageurl}>js/adminmenu.js"></script>
+<script type="text/javascript" src="<{$xoops_imageurl}>js/ie5.js"></script>
+</head>
+<body>
+	<{$pageadminbar}>
+	<div class="wrapper">
+	<{include file="6xue/header/header.html"}>
+	<{if $xoops_showlblock == 1 || $xoops_showcblock == 1 || $xoops_showrblock == 1}>
+  		<table class="maintable" cellspacing="0">
+    		<tr>
+				<!-- Display left blocks start-->
+				<{if $xoops_showlblock == 1}>
+				<td id="leftcolumn" name="leftcolumn">
+        			 <!-- Start left blocks loop -->
+        			<{foreach item=block from=$xoops_lblocks}>
+          			<{include file="6xue/blocks/theme_blockleft.html"}>
+        			<{/foreach}>
+        			<!-- End left blocks loop -->
+				</td>
+				<{/if}>
+				<!-- Display left blocks end -->
+				<td id="centercolumn">
+					<!-- Display center blocks if any -->
+        			<{if $xoops_showcblock == 1}>
+						<table cellspacing="0">
+						<tr>
+            				<td id="centerCcolumn" colspan="2">
+								<!-- Start center-center blocks loop -->
+            					<{foreach item=block from=$xoops_ccblocks}>
+              					<{include file="6xue/blocks/theme_block.html"}>
+            					<{/foreach}>
+            					<!-- End center-center blocks loop -->
+            				</td>
+          				</tr>
+          				<tr>
+            				<td id="centerLcolumn">
+								<!-- Start center-left blocks loop -->
+              					<{foreach item=block from=$xoops_clblocks}>
+                				<{include file="6xue/blocks/theme_blockcenter_l.html"}>
+              					<{/foreach}>
+            					<!-- End center-left blocks loop -->
+            				</td>
+							<td id="centerRcolumn">
+            					<!-- Start center-right blocks loop -->
+              					<{foreach item=block from=$xoops_crblocks}>
+                				<{include file="6xue/blocks/theme_blockcenter_r.html"}>
+              					<{/foreach}>
+            					<!-- End center-right blocks loop -->
+            				</td>
+          				</tr>
+        				</table>
+        			<{/if}>
+        			<!-- End display center blocks -->
+					<{if $xoops_contents}>
+        			<div id="content">
+          			<{$xoops_contents}>
+        			</div>
+					<{/if}>
+      		</td>
+				<!-- Display right blocks start-->
+      		<{if $xoops_showrblock == 1}>
+				<td id="rightcolumn">
+				<{if $showrightfaqt == 1}>
+          			<{include file="6xue/blocks/theme_rightfaq.html"}>
+				<{/if}>
+        			<!-- Start right blocks loop -->
+        			<{foreach item=block from=$xoops_rblocks}>
+          			<{include file="6xue/blocks/theme_blockright.html"}>
+        			<{/foreach}>
+        			<!-- End right blocks loop -->
+				<{if $showrightfaqb == 1}>
+          			<{include file="6xue/blocks/theme_rightfaq.html"}>
+				<{/if}>
+      			</td>
+			<{/if}>
+				<!-- Display right blocks end-->
+			</tr>
+  		</table>
+	<{else}>
+      <div id="content">
+        <{$xoops_contents}>
+      </div>
+	<{/if}>
+	<{include file="6xue/footer/footer.html"}>
+</div>
+<{$pageadminfooter}>
+<!-- google 广告 //-->
+
+<!-- google 广告结束 //-->
+</body>
+</html>
